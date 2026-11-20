@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include('../sections/head'); %>
+</head>
+<body class="d-flex flex-column min-vh-100"> 
+    <main>
+        <div class="container">
+            <%- include ('../sections/menu'); %>   
+            <h1>Productos ejs</h1>
+            <div>
+                <div class="col-2"></div>
+                <div class="col-8">
+                    <form action="/guardarProducto" method="post">
+                        <div class="card">
+                            <div class="card-header">
+                                <h1>INsertar porudcto</h1>
+                            </div>
+                            <div class="card-body">
+                                <input type="text" class="form-control"
+                                    name="nombreProducto" id="nombreProducto"
+                                    placeholder="Nombre del producto"/>
+                                <input type="text" class="form-control"
+                                    name="marcaProducto" id="marcaProducto"
+                                    placeholder="marca del producto"/>    
+                                <input type="text" class="form-control"
+                                    name="precioProducto" id="precioProducto"
+                                    placeholder="precio del producto"/>
+                            </div>
+                            <div class="card-footer">
+                                <a href="/listaProductos" class="btn btn-secondary">Cancelar</a>
+                            <button class="btn btn-primary" type="submit">
+                                Guardar producto
+                                
+                            </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer mt-auto py-3 bg-light"> 
+        <%- include('../sections/footer'); %>
+    </footer>
+    
+</body>
+</html>
